@@ -12,19 +12,13 @@ export default class Register {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({
-    length: 100,
-  })
+  @Column()
   name: string;
 
-  @Column({
-    length: 100,
-  })
+  @Column()
   email: string;
 
-  @Column({
-    length: 14,
-  })
+  @Column()
   CPF: string;
 
   @Column()
@@ -37,5 +31,5 @@ export default class Register {
     cascade: ['insert', 'update'],
   })
   @JoinColumn({ name: 'register' })
-  knowledge: Knowledge[];
+  knowledges: Knowledge[];
 }

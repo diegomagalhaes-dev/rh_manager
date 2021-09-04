@@ -18,7 +18,7 @@ export default class Knowledge {
   @Column()
   category: string;
 
-  @ManyToOne(() => Register, register => register.knowledge)
+  @ManyToOne(() => Register, register => register.knowledges)
   @JoinColumn({ name: 'register' })
   register: Register;
 }
